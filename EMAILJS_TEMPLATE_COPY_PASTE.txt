@@ -1,0 +1,163 @@
+==========================================
+EMAILJS TEMPLATE - COPY AND PASTE THIS
+==========================================
+
+STEP 1: SUBJECT LINE
+---------------------
+Copy this into the "Subject" field:
+
+Contact Form: {{subject}}
+
+
+STEP 2: EMAIL CONTENT/BODY
+--------------------------
+Copy this entire block into the "Content" or "Message" field:
+
+You have a new message from your portfolio website!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+From: {{from_name}}
+Email: {{from_email}}
+Subject: {{subject}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Message:
+{{message}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Reply directly to this email to respond to {{from_name}}.
+
+
+STEP 3: REPLY-TO CONFIGURATION
+-------------------------------
+1. In the EmailJS template editor, look for:
+   - "Settings" section
+   - "Advanced Options" 
+   - "Reply-To" field
+   - Or "Headers" section
+
+2. Find the "Reply-To" field and enter:
+   {{reply_to}}
+
+   OR if that doesn't work, try:
+   {{from_email}}
+
+3. Save and Publish the template
+
+
+STEP 4: VERIFY TEMPLATE VARIABLES
+----------------------------------
+Make sure these variables are available in your template:
+✓ {{from_name}} - Visitor's name
+✓ {{from_email}} - Visitor's email
+✓ {{reply_to}} - Visitor's email (for Reply-To)
+✓ {{subject}} - Message subject
+✓ {{message}} - Message content
+✓ {{to_email}} - Your email (optional)
+
+
+==========================================
+ALTERNATIVE SIMPLE VERSION (If above doesn't work)
+==========================================
+
+SUBJECT:
+--------
+New Contact: {{from_name}} - {{subject}}
+
+
+CONTENT:
+--------
+You have a new message from your portfolio website!
+
+Name: {{from_name}}
+Email: {{from_email}}
+Subject: {{subject}}
+
+Message:
+{{message}}
+
+---
+To reply, use this email: {{from_email}}
+
+
+REPLY-TO:
+---------
+{{reply_to}} or {{from_email}}
+
+
+==========================================
+HTML VERSION (If you want formatted email)
+==========================================
+
+SUBJECT:
+--------
+Contact Form: {{subject}}
+
+
+CONTENT (HTML):
+---------------
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #2563eb;">New Contact Form Message</h2>
+  
+  <div style="background-color: #f3f4f6; padding: 15px; border-radius: 5px; margin: 20px 0;">
+    <p><strong>From:</strong> {{from_name}}</p>
+    <p><strong>Email:</strong> {{from_email}}</p>
+    <p><strong>Subject:</strong> {{subject}}</p>
+  </div>
+  
+  <div style="background-color: #ffffff; padding: 15px; border-left: 4px solid #2563eb; margin: 20px 0;">
+    <h3 style="margin-top: 0;">Message:</h3>
+    <p style="white-space: pre-wrap;">{{message}}</p>
+  </div>
+  
+  <p style="color: #6b7280; font-size: 12px; margin-top: 30px;">
+    Reply directly to this email to respond to {{from_name}}.
+  </p>
+</div>
+
+
+REPLY-TO:
+---------
+{{reply_to}}
+
+
+==========================================
+INSTRUCTIONS FOR EMAILJS DASHBOARD
+==========================================
+
+1. Go to: https://dashboard.emailjs.com/
+2. Click "Email Templates" in left sidebar
+3. Click on your template: template_2kpo1dh
+4. Click "Edit" button
+5. Copy the SUBJECT from above into "Subject" field
+6. Copy the CONTENT from above into "Content" or "Message" field
+7. Scroll down to find "Settings" or "Advanced Options"
+8. Find "Reply-To" field and enter: {{reply_to}}
+9. Click "Save"
+10. Make sure template is "Published" (not draft)
+11. Test by submitting your contact form!
+
+
+==========================================
+TROUBLESHOOTING
+==========================================
+
+If Reply-To field is not visible:
+- Some EmailJS templates don't show Reply-To in the editor
+- Check "Settings" or gear icon in template editor
+- Look for "Headers" section
+- You may need to add it manually as a header: Reply-To: {{reply_to}}
+
+If variables don't work:
+- Make sure variable names match exactly (case-sensitive)
+- Use double curly braces: {{variable_name}}
+- No spaces inside braces: {{variable}} not { { variable } }
+
+If email format looks wrong:
+- Use the HTML version above
+- Or use the simple text version
+- Make sure you're using the correct field (Content vs Message)
+
